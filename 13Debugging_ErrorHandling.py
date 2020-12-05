@@ -137,6 +137,7 @@ def divide(a,b):
 
 print(divide(1,2))
 print(divide(1,"a"))
+print(divide(1,0))
 
 # Community SOLUTIONS 3.3.1
 def divide(a,b):

@@ -125,6 +125,8 @@ def sum_floats(*args):
 
 print(sum_floats(1.5, 2.4, 'awesome', [], 1))
 
+
+
 print("------------  My solution. Lambda Exercise 69 --------------------")
 
 def interleave(string1, string2):

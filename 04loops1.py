@@ -1,21 +1,21 @@
-# for x in range(1,5):
-#     print(x)
-#     print(x*x)
+for x in range(1,5):
+    print(x)
+    print(x*x)
 
-# for let in "Love":
-#     print(let)
+for let in "Love":
+    print(let)
 
-#using range
+# using range
 
-# range(0,10)
-# l = range(10, 2, -1) # imprime de 10 a 2, restando -1 
-# list(l) # pone tod la info en una lista. 
-#
-# for num in range(10):
-#     print(num)
-#
-# for num in range(10, 20, 5):
-#     print(num)
+range(0,10)
+l = range(10, 2, -1) # imprime de 10 a 2, restando -1 
+list(l) # pone tod la info en una lista. 
+
+for num in range(10):
+    print(num)
+
+for num in range(10, 20, 5):
+    print(num)
 
 #FIRST EXERCISE 1
 

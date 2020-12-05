@@ -23,8 +23,8 @@ def my_for(iterable):
         except StopIteration:
             break
 
-# my_for("Hi Richard")
-# my_for([1,2,3,4])
+my_for("Hi Richard")
+my_for([1,2,3,4])
 
 #######################################
 def my_for(iterable, func):
@@ -61,3 +61,25 @@ class Counter:
 
 # for x in Counter(0, 10):
 #     print(x)
+
+
+
+
+### COPY PASTE COLT SOLUTION ###
+
+# Ejercicio de codificación 87: get_multiples
+def get_multiples(num=1, count=10):
+    next_num = num
+    while count > 0:
+        yield next_num
+        count -= 1
+        next_num += num
+
+
+
+## Ejercicio de codificación 88: get_unlimited_multiples
+def get_unlimited_multiples(num=1):
+    next_num = num
+    while True:
+        yield next_num
+        next_num += num

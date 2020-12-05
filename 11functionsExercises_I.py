@@ -1,3 +1,96 @@
+# Exercise 39
+print("------- My solution ----------")
+def generate_evens():
+    return [x for x in range(50) if x%2 == 0]
+
+
+def generate_evens1():
+    list = []
+    for n in range(50):
+        if(n % 2 == 0):
+            list.append(n)
+    return list 
+print("------- COLT SOLUTION 1 ----------")
+
+def generate_evens():
+    return [x for x in range(1,50) if x%2 == 0]
+
+
+print("------- COLT SOLUTION 2 ----------")
+def generate_evens():
+    result = []
+    for x in range(1,50):
+        if x % 2 == 0:
+            result.append(x)
+    return result
+
+
+# Exercise 40
+def yell(letter):
+    return letter.upper()
+
+# Exercise 41
+def count_dollar_signs(word):
+    count = 0
+    for char in word:
+        if char == '$':
+            count += 1
+    return count 
+
+ count_dollar_signs("$super S$ize")
+
+# Exercise 42
+print("------- My solution ----------")
+def speak(animal):
+    animalSounds = {
+       "pig" : "oink",
+       "duck": "quack",
+       "cat" : "meow",
+       "dog" : "woof", 
+    }
+    if (animal in animalSounds.keys()):
+        return animalSounds[animal]
+    else:
+        return "?"
+
+
+
+animalSounds = {
+    "pig" : "oink",
+    "duck": "quack",
+    "cat" : "meow",
+    "dog" : "woof", 
+}
+
+animalSounds["pig"]
+
+speak("duck")
+
+speak("bruja")
+print("------- COLT SOLUTION 1 ----------")
+def speak(animal="dog"):
+    if animal == "pig":
+        return "oink"
+    elif animal == "duck":
+         return "quack"
+    elif animal == "cat":
+        return "meow"
+    elif animal == "dog":
+        return "woof"
+    else:
+        return "?"
+
+print("------- COLT SOLUTION 2 ----------")
+def speak(animal="dog"):
+    noises = {"dog": "woof", "pig": "oink", "duck": "quack", "cat": "meow"}
+    noise = noises.get(animal)
+    if noise:
+        return noise
+    return "?"
+
+
+
+
 # Exercise 43
 print("------- My solution ----------")
 
@@ -17,7 +110,15 @@ def return_day(day):
         days = {1 :'Sunday', 2 :'Monday', 3 :'Tuesday', 4 :'Wednesday', 5 : 'Thursday', 6 : 'Friday', 7 : 'Saturday'}
         return days.get(day)
 
-#print(return_day(45))
+
+def return_day(num):
+    dayWeeks = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    try:
+        return dayWeeks[num-1]
+    except:
+        return "None"
+
+#print(return_day(9))
 
 print("------- COLT SOLUTION 1 ----------")
 
@@ -118,7 +219,7 @@ def multiple_letter_count(string):
 print("------- COLT SOLUTION 48 ----------")
 def multiple_letter_count(string):
     return {letter: string.count(letter) for letter in string}
-
+---------------------------------------------------------------------------
 print("------- My Solution 49 ----------")
 
 '''
@@ -203,9 +304,12 @@ frequency([1,2,3,4,4,4], 4) # 3
 frequency([True, False, True, True], False) # 1
 '''
 def frequency(list, value):
-    for i in list:
-        frequence = list.count(value)
-        return frequence
+    frequence = list.count(value)
+    return frequence
+
+def frequency(list, value):
+    return list.count(value)
+
 
 print(frequency([1,2,3,4,4,4], 4)) # 3
 
@@ -285,6 +389,9 @@ def intersection(list1, list2):
     list_convert = list(list1 & list2)
     return list_convert
 
+def intersection(list1, list2):
+    return list(set(list1) & set(list2))
+    
 print(intersection([1,2,3], [2,3,4]))
 
 print("------- My solution (2) 55 ----------")
@@ -318,7 +425,7 @@ def partition(list, fn=isEven):
     list2 = [num for num in list if num % 2 != 0]
     return [isEven(list), list2]
 
-print(partition([1,2,3,4], isEven))
+print(partition([1,2,3,4], isEven)) #[[2, 4], [1, 3]]
 
 print("------- COLT SOLUTION (1) 56 ----------")
 

@@ -8,6 +8,12 @@ friends = ["Elie", "Tim", "Matt"]
 answer2 = [friend[::-1].lower() for friend in friends]
 print(answer2)
 
+
+## Pruebas
+friends = ["Elie", "Tim", "Matt"]
+Family = ["Elie", "Juan", "Mattias"]
+answer = [value for value in friends if value in Family] # Elie
+
 print("---------------- COLT SOLUTION 1 -------------")
 
 answer = [val for val in [1,2,3,4] if val in [3,4,5,6]]

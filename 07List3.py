@@ -23,7 +23,7 @@ first_list[2::-1] #[3, 2, 1]
 
 #Triki stuff
 numbers = [1, 2, 3, 4, 5]
-numerbs[1:3] = ["a", "b", "c"]
+numbers[1:3] = ["a", "b", "c"]
 
 #more interesting stuff
 sounds = ["super", "cali", "fragil", "istic", "expi", "ali", "docious"]

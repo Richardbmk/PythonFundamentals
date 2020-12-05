@@ -52,3 +52,11 @@ https://pythex.org
 http://google.com
 """
 
+
+# 354. Regex Profanity Filter
+
+import re
+ 
+def censor(input):
+    pattern = re.compile(r'\bfrack\w*\b', re.IGNORECASE)
+    return pattern.sub("CENSORED", input)

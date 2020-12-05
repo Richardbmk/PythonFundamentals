@@ -80,7 +80,7 @@ names
 d_names = filter(lambda n: n[0]=="D", names)
 d_names
 list(d_names)
-
+----------------------------------------------------------------
 # Big exemple
 users = [
 	{"username": "samuel", "tweets": ["I love cake", "I love pie", "hello world!"]},
@@ -93,7 +93,7 @@ users = [
 
 inactive_users = list(filter(lambda u: len(u["tweets"]) == 0, users))
 print(inactive_users)
-inactive_users = list(filter(lambda u: ["tweets"]), users)) # You will obtain de opposite
+inactive_users = list(filter(lambda u: ["tweets"], users)) # You will obtain de opposite
 
 #extract inactive users using filter:
 inactive_users = list(filter(lambda u: not u['tweets'], users))
@@ -124,7 +124,7 @@ list(map(lambda name: f"Your instructor is {name}",
 names = ['Lassie', 'Colt', 'Rusty']
 
 [f"Your instructor is {name}" for name in names if len(name) < 5]
-
+---------------------------------------------------------------------
 '''
 Built in functions
 '''
@@ -224,6 +224,13 @@ l = [1,2,3,4]
 
 total = reduce(lambda x, y: x + y, l, 10)
 
+lis = [ 1 , 3, 5, 6, 2, ] 
+# using reduce to compute sum of list
+functools.reduce(lambda a,b : a+b,lis)
+# using reduce to compute maximum element from list
+functools.reduce(lambda a,b : a if a > b else b,lis)
+
+
 '''
 Min and Max Built functions
 '''
@@ -269,7 +276,7 @@ max(songs, key=lambda s: s["duration"])["title"]
 
 max = 0
 for song in songs:
-    if song["artists"] > max
+    if song["artists"] > max:
         max = song["duration"]
 
 '''
@@ -308,7 +315,6 @@ len({"s": 10, "10": "as"})
 len({})
 
 class SpecialList:
-
     def __init__(self, data):
         self.__data = data
 

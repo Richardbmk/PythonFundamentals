@@ -65,7 +65,7 @@ def sum_odd_numbers(numbers):
     for num in numbers:
         if num % 2 != 0:
             total += num
-        return total
+    return total
 print(sum_odd_numbers([1, 2, 3, 4, 5, 6, 7]))
 
 # Unnecessary "else"
@@ -128,7 +128,7 @@ def exponent(num, power=2):
     return num ** power
 
 print(exponent(2, 3)) # 8
-print(exponent(power=2, num=4)) # 64
+print(exponent(power=2, num=4)) # 16
 print(exponent(num=4, power=2)) # 64
 
 # Scope
@@ -141,6 +141,8 @@ def increment():
     return total
 
 increment() # Error!
+
+############################################
         #How to make it work!
 total = 0
 
@@ -150,6 +152,8 @@ def increment():
     return total
 
 increment() # 1
+############################################
+
 
 # NonLocal
 def outer():

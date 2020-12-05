@@ -92,3 +92,8 @@ def find_user(first_name, last_name):
             return f"{first_name}, {last_name}"
 
 # find_user("Fresa", "50 g")
+
+
+
+# Ejercicio de codificación 98: find_and_replace
+

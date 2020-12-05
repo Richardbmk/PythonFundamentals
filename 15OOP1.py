@@ -50,8 +50,9 @@ p = Person()
 
 print(p.name)
 print(p._secret)
-#print(dir(p))
+print(dir(p))
 print(p._Person__msg)
+print(p.__msg) # ain't work!
 print(p._Person__lol)
 
 # Another exemple
@@ -93,18 +94,18 @@ print(User.active_users)
 user1 = User("Joe", "Smith", 68)
 user2 = User("Bianca", "Lubina", 35)
 
-# print(user1.full_name())
-#
-# print(user1.likes("Ice Cream"))
-# print(user2.likes("Chips"))
-#
-# print(user1.initials())
-# print(user2.initials())
-#
-# print(user2.is_senior())
-# print(user1.age)
-# print(user2.birthday())
-# print(user1.age)
+print(user1.full_name())
+
+print(user1.likes("Ice Cream"))
+print(user2.likes("Chips"))
+
+print(user1.initials())
+print(user2.initials())
+
+print(user2.is_senior())
+print(user1.age)
+print(user2.birthday())
+print(user1.age)
 
 
 print(User.active_users)

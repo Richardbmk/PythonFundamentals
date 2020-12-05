@@ -7,18 +7,18 @@ class Animal:
 class Cat(Animal):
     pass
 
-# a = Animal()
-# a.make_sound("CHIRP")
+a = Animal()
+a.make_sound("CHIRP")
 
 blue = Cat()
-# blue.make_sound("MEOW")
-# print(blue.cool)
-# print(Cat.cool)
-# print(Animal.cool)
+blue.make_sound("MEOW")
+print(blue.cool)
+print(Cat.cool)
+print(Animal.cool)
 
-# print(isinstance(blue, Cat))
-# print(isinstance(blue, Animal))
-# print(isinstance(blue, object))
+print(isinstance(blue, Cat))
+print(isinstance(blue, Animal))
+print(isinstance(blue, object))
 
 #254. All about properties
 
@@ -64,13 +64,13 @@ class Human:
 
 
 jane = Human("Jane", "Goodall", -50)
-# print(jane.age)
-# jane.age = -100
-# print(jane.age)
+print(jane.age)
+jane.age = -100
+print(jane.age)
 
-# print(jane.get_age())
-# jane.set_age(-45)
-# print(jane.get_age())
+print(jane.get_age())
+jane.set_age(-45)
+print(jane.get_age())
 
 print(jane.age)
 jane.age = 20

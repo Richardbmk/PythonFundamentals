@@ -7,7 +7,7 @@ import re
 pattern = re.compile(r"\d{3} \d{3}-\d{4}")
 
 # type(pattern)
-# help(patter)
+# help(pattern)
 
 #search a string with our regex
 #res = pattern.search("Call me at 415 555-4242!")
@@ -28,8 +28,8 @@ re.search(r"\d{3} \d{3}-\d{4}", "Call me at 415 555-4242").group() #'415 555-424
 # 346. Validating Phone Numbers With Python
 
 def extract_phone(input):
-    #phone_regex = re.compile(r"\d{3} \d{3}-\d{4}")
-    phone_regex = re.compile(r"\b\d{3} \d{3}-\d{4}\b")
+    phone_regex = re.compile(r"\d{3} \d{3}-\d{4}")
+    #phone_regex = re.compile(r"\b\d{3} \d{3}-\d{4}\b")
     match = phone_regex.search(input)
     if match:
         return match.group()

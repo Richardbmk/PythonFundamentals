@@ -24,48 +24,48 @@ html = """
 soup = BeautifulSoup(html, "html.parser")
 
 """ loking for HTML tags"""
-# print(soup)
-# print(type(soup))
-# print(soup.body)
-# print(soup.body.div)
-# print(soup.find("div"))
+print(soup)
+print(type(soup))
+print(soup.body)
+print(soup.body.div)
+print(soup.find("div"))
 
-# d = soup.find("div")
-# print(type(d))
+d = soup.find("div")
+print(type(d))
 
-# print(soup.find_all("div"))
+print(soup.find_all("div"))
 
-# print(soup.find(id="first"))
+print(soup.find(id="first"))
 
-# print(soup.find_all(class_="special"))
+print(soup.find_all(class_="special"))
 
-# print(soup.find_all(attrs={"data-example": "yes"}))
+print(soup.find_all(attrs={"data-example": "yes"}))
 
 """ loking foR CSS tags"""
-# print(soup.select("#first")) # Give a list
-# print(soup.select("#first")[0]) # without a list
-# print(soup.select(".special"))
-# print(soup.select("div"))
-# print(soup.select("[data-example]"))
+print(soup.select("#first")) # Give a list
+print(soup.select("#first")[0]) # without a list
+print(soup.select(".special"))
+print(soup.select("div"))
+print(soup.select("[data-example]"))
 
 
 """ loking foR the information inside the tags"""
 
-# el = soup.select(".special")[0]
-# print(el.get_text())
+el = soup.select(".special")[0]
+print(el.get_text())
 
-# for el in soup.select(".special"):
-# 	print(el.get_text())
+for el in soup.select(".special"):
+	print(el.get_text())
 
-# for el in soup.select(".special"):
-# 	print(el.name)
+for el in soup.select(".special"):
+	print(el.name)
 
-# for el in soup.select(".special"):
-# 	print(el.name)
-# 	print(el.attrs) # access the atributs
+for el in soup.select(".special"):
+	print(el.name)
+	print(el.attrs) # access the atributs
 
 attr = soup.find("h3")["data-example"]
-# print(attr)
+print(attr)
 
 attr = soup.find("div")["id"]
-# print(attr)
+print(attr)

@@ -98,3 +98,29 @@ say_hi()
 # should print the message "Waiting 3s before running say_hi" to the console
 # should then wait 3 seconds
 # finally, should invoke say_hi and return "hi"
+
+
+
+### COPY PASTE COLT SOLUTION ###
+# Ejercicio de codificación 93: ensure_authorized
+def get_unlimited_multiples(num=1):
+    next_num = num
+    while True:
+        yield next_num
+        next_num += num
+
+
+## Ejercicio de codificación 94: delay
+from functools import wraps
+from time import sleep
+ 
+def delay(timer):
+    def inner(fn):
+        @wraps(fn)
+        def wrapper(*args, **kwargs):
+            print("Waiting {}s before running {}".format(timer, fn.__name__))
+            sleep(timer)
+            return fn(*args, **kwargs)
+        return wrapper
+    return inner
+

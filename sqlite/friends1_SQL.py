@@ -12,11 +12,11 @@ people = [
     ("Pitter", "Parker", 5)
 ]
 
-#c.executemany("INSERT INTO friends VALUES (?,?,?)", people)
+c.executemany("INSERT INTO friends VALUES (?,?,?)", people)
 
-#for person in people:
-#    c.execute("INSERT INTO friends VALUES (?,?,?)", person)
-#    print("INSERTING DATA NOW!")
+for person in people:
+   c.execute("INSERT INTO friends VALUES (?,?,?)", person)
+   print("INSERTING DATA NOW!")
 
 avarege = 0
 for person in people:

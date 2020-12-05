@@ -78,3 +78,21 @@ class Train:
 a_train = Train(4)
 print(a_train)
 print(len(a_train))
+
+
+#### COPY PASTE COLT SOLUTION ####
+
+# Ejercicio de codificación 79: Chicken Coop Exercise
+class Chicken:
+    total_eggs = 0
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+        self.eggs = 0
+    
+    def lay_egg(self):
+        self.eggs += 1
+        Chicken.total_eggs += 1
+        return self.eggs
+
+### Ejercicio de codificación 78: Bank Account OOP Exercise

@@ -1,17 +1,17 @@
 # Extra Fancy JSON Pickling
-# import json
-#
-# class Cat:
-# 	def __init__(self, name, breed):
-# 		self.name = name
-# 		self.breed = breed
-#
-# c = Cat("Charles", "Tabby")
-#
-# # j = json.dumps(["foo", {"bar": ("baz", None, 1.0, 2)}])
-# j = json.dumps(c.__dict__)
-#
-# print(j)
+import json
+
+class Cat:
+	def __init__(self, name, breed):
+		self.name = name
+		self.breed = breed
+
+c = Cat("Charles", "Tabby")
+
+j = json.dumps(["foo", {"bar": ("baz", None, 1.0, 2)}])
+j = json.dumps(c.__dict__)
+
+print(j)
 
 ## EXEMPLE WITH JSONPCKLE (YOUR HAVE TO INSTALL THE PACKEGE)
 
@@ -27,15 +27,15 @@ class Cat:
 # frozen = jsonpickle.encode(c)
 # print(frozen)
 
-# with open("catpicke.jason", "w") as file:
-# 	frozen = jsonpickle.encode(c)
-# 	file.write(frozen)
+with open("catpicke.jason", "w") as file:
+	frozen = jsonpickle.encode(c)
+	file.write(frozen)
 
 
-# with open("catpicke.jason", "r") as file:
-# 	contents = file.read()
-# 	unfrozen = jsonpickle.decode(contents)
-# 	print(unfrozen)
+with open("catpicke.jason", "r") as file:
+	contents = file.read()
+	unfrozen = jsonpickle.decode(contents)
+	print(unfrozen)
 
 
 """ EXERCISE SECCION """
